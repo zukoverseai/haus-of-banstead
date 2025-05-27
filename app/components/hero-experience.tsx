@@ -55,7 +55,8 @@ export function HeroExperience() {
       className="relative h-screen flex items-center justify-center overflow-hidden bg-cover bg-center"
       style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('/haus-light.png')` }}
     >
-      {/* Animated Background Elements */}
+      {/**
+      Animated Background Elements (commented out)
       <div className="absolute inset-0">
         {[...Array(20)].map((_, i) => (
           <div
@@ -70,16 +71,17 @@ export function HeroExperience() {
           />
         ))}
       </div>
+      **/}
 
-      {/* Interactive Geometric Shapes (hidden on small screens) */}
+      {/**
+      Interactive Geometric Shapes (commented out)
       <div className="absolute inset-0 pointer-events-none hidden md:block">
         <div
           className={`absolute w-96 h-96 border ${shapeBorderColor} rounded-full transition-all duration-1000 ease-out`}
           style={{
             left: "10%",
             top: "20%",
-            transform: `translate(${mousePosition.x * 50}px, ${mousePosition.y * 30
-              }px) rotate(${mousePosition.x * 10}deg)`,
+            transform: `translate(${mousePosition.x * 50}px, ${mousePosition.y * 30}px) rotate(${mousePosition.x * 10}deg)`,
           }}
         />
         <div
@@ -87,11 +89,11 @@ export function HeroExperience() {
           style={{
             right: "15%",
             bottom: "25%",
-            transform: `translate(${-mousePosition.x * 30}px, ${-mousePosition.y * 40
-              }px) rotate(${-mousePosition.y * 15}deg)`,
+            transform: `translate(${-mousePosition.x * 30}px, ${-mousePosition.y * 40}px) rotate(${-mousePosition.y * 15}deg)`,
           }}
         />
       </div>
+      **/}
 
       {/* Main Content */}
       <div className="relative z-10 text-center max-w-6xl mx-auto px-4">
