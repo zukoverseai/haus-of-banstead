@@ -52,7 +52,7 @@ export function HeroExperience() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-cover bg-center"
+      className="relative h-screen flex items-center justify-center overflow-hidden bg-cover bg-center"
       style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('/haus-light.png')` }}
     >
       {/* Animated Background Elements */}
@@ -74,7 +74,7 @@ export function HeroExperience() {
       {/* Interactive Geometric Shapes (hidden on small screens) */}
       <div className="absolute inset-0 pointer-events-none hidden md:block">
         <div
-          className={`absolute w-96 h-96 border ${shapeBorderColor} rounded-full transition-transform duration-1000 ease-out`}
+          className={`absolute w-96 h-96 border ${shapeBorderColor} rounded-full transition-all duration-1000 ease-out`}
           style={{
             left: "10%",
             top: "20%",
@@ -83,7 +83,7 @@ export function HeroExperience() {
           }}
         />
         <div
-          className={`absolute w-64 h-64 border ${secondaryShapeBorderColor} transition-transform duration-700 ease-out`}
+          className={`absolute w-64 h-64 border ${secondaryShapeBorderColor} transition-all duration-700 ease-out`}
           style={{
             right: "15%",
             bottom: "25%",
@@ -96,7 +96,7 @@ export function HeroExperience() {
       {/* Main Content */}
       <div className="relative z-10 text-center max-w-6xl mx-auto px-4">
         <div
-          className="mb-12 transition-transform duration-500 ease-out"
+          className="mb-12 transition-all duration-500 ease-out"
           style={{
             transform: `translateY(${mousePosition.y * -20}px)`,
           }}
@@ -122,26 +122,27 @@ export function HeroExperience() {
 
         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
           <a
-            href="https://calendly.com/hausofbanstead/30min"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#contact-us"
             onMouseEnter={() => setIsBookingHovered(true)}
             onMouseLeave={() => setIsBookingHovered(false)}
             className={`group relative px-8 py-4 font-medium tracking-wide rounded-full overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl ${primaryButtonClasses}`}
           >
             <span className="relative z-10">Book a Consultation</span>
             <div
-              className={`absolute inset-0 ${primaryButtonHoverEffect} transition-transform duration-300 ${isBookingHovered ? "scale-110" : "scale-100"}`}
+              className={`absolute inset-0 ${primaryButtonHoverEffect} transition-all duration-300 ${isBookingHovered ? "scale-110" : "scale-100"}`}
             />
           </a>
 
-        
-        </div>
-      </div>
 
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <ArrowDown className={`h-6 w-6 ${scrollIndicatorColor}`} />
+
+          {/* Secondary Contact Us Button */}
+          <a
+
+            className="border border-brand text-brand px-8 py-4 rounded-full transition-colors hover:bg-brand/10"
+          >
+            About Us
+          </a>
+        </div>
       </div>
     </section>
   );

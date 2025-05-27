@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { HeroExperience } from "./components/hero-experience";
 import { LoadingExperience } from "./components/loading-experience";
+import ContactUs from "./components/contact-us";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -27,6 +28,7 @@ export default function Home() {
   return (
     <main className="relative overflow-hidden bg-white text-stone-800">
       <HeroExperience />
+      <ContactUs />
     </main>
   );
 }
