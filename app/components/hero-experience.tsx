@@ -122,7 +122,7 @@ export function HeroExperience() {
 
         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
           <a
-            href="https://hausofbanstead.hbportal.co/public/HOB/1-Schedule_a_call"
+            href="https://calendly.com/hausofbanstead/30min"
             target="_blank"
             rel="noopener noreferrer"
             onMouseEnter={() => setIsBookingHovered(true)}
@@ -135,14 +135,7 @@ export function HeroExperience() {
             />
           </a>
 
-          <a
-            href="https://www.honeybook.com/widget/hausof_banstead_290855/cf_id/6832009424743a0026664c6e"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={`flex items-center justify-center px-8 py-4 font-medium tracking-wide rounded-full transition-all duration-300 ${secondaryButtonClasses}`}
-          >
-            <span>I know what I want!</span>
-          </a>
+        
         </div>
       </div>
 
